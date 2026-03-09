@@ -147,7 +147,7 @@ python caption_demo.py
 
 ```bash
 # 1. 克隆仓库
-git clone https://gitee.com/你的用户名/RS-MultiTask-System.git
+git clone https://gitee.com/Lsyuye/rs-multi-task-system.git
 cd RS-MultiTask-System
 
 # 2. 安装前端依赖
