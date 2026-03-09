@@ -1,0 +1,39 @@
+/* --- ImageCaption.css --- */
+
+/* --- 响应式、固定比例的图片上传框 --- */
+/* 我们复用完全相同的样式，但可能需要一个不同的类名以避免冲突 */
+/* 这里我们继续使用 avatar-uploader，因为它已经在你的JSX里了 */
+
+/* 1. 让上传框容器占满 Card 的 body 区域 */
+.avatar-uploader.ant-upload-wrapper {
+  width: 90%;
+  height: 90%;
+  max-width: 900px; /* 可以设置一个最大宽度 */
+  max-height: 9000px; /* 也可以设置一个最大高度 */
+  aspect-ratio: 1 / 1; /* 保持 1:1 的正方形比例 */
+}
+
+/* 2. 确保 antd 内部的上传区域能够撑满我们定义的容器 */
+.avatar-uploader .ant-upload.ant-upload-select {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 8px;
+  border: 2px dashed #d9d9d9 !important; /* 统一边框样式 */
+  background-color: #fafafa; /* 给一个淡淡的背景色 */
+  transition: border-color 0.3s; /* 添加过渡效果 */
+}
+
+.avatar-uploader .ant-upload.ant-upload-select:hover {
+  border-color: #1890ff !important; /* 鼠标悬浮时边框变蓝 */
+}
+
+/* 3. 预览图的样式，确保它能完美填充且不变形 */
+.avatar-uploader img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* **核心：图片按比例缩放，完整地显示在容器内** */
+  padding: 8px; /* 给图片留一点内边距，更美观 */
+  box-sizing: border-box; /* 确保 padding 不会撑大图片 */
+}

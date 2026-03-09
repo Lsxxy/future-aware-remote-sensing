@@ -1,0 +1,65 @@
+/* --- 响应式、固定比例的图片上传框 --- */
+
+/* 1. 定义上传框的容器为一个响应式的正方形 */
+/* 这个 className 同时适用于 Dragger 和 picture-card 模式 */
+.responsive-square-uploader.ant-upload-wrapper {
+  /* **核心修改：尺寸由高度决定** */
+  height: 90%; /* 让它的高度占父容器 Card body 的 90% */
+  
+  /* **核心修改：移除宽度限制，让宽度由 aspect-ratio 自动计算** */
+  /* width: 90%; */ /* <-- 删除或注释掉这一行 */
+  /* max-width: 450px; */ /* <-- 删除或注释掉这一行 */
+  
+  max-height: 600px; /* 可选：在非常高的屏幕上，限制一个最大高度 */
+
+  aspect-ratio: 1 / 1; /* **现在，它会根据高度来自动设置一个相等的宽度** */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. 确保 antd 内部的上传区域能够撑满我们定义的容器 */
+.responsive-square-uploader .ant-upload.ant-upload-select,
+.responsive-square-uploader .ant-upload-list-item-container,
+.responsive-square-uploader .ant-upload-list-item {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 2px dashed #d9d9d9 !important; /* 统一边框样式 */
+  border-radius: 8px;
+}
+
+.responsive-square-uploader .ant-upload-list-item-info {
+    width: 100%;
+    height: 100%;
+}
+
+/* 3. 设置预览图的样式，确保它能完美填充且不变形 */
+.preview-image-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* **核心：图片按比例缩放，完整地显示在容器内** */
+  padding: 8px; /* 给图片留一点内边距，更美观 */
+  box-sizing: border-box; /* 确保 padding 不会撑大图片 */
+}
+
+/* 4. 占位符样式 */
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: #8c8c8c;
+}
+
+
+/* --- 固定高度、可滚动的内容区域 --- */
+.scrollable-content {
+  height: 100%; /* 占满父容器 Card 的 body 部分 */
+  overflow-y: auto; /* **核心：当内容超出时，垂直方向出现滚动条** */
+  padding-right: 16px; /* 给滚动条留出空间，避免遮挡文字 */
+}

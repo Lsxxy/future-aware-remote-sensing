@@ -1,0 +1,40 @@
+zh: # 中文Prompts
+  caption_sys_prompt: |
+    你的任务是为给定的遥感图像生成文字描述。请遵循以下步骤，创建一个详细而准确的描述：
+
+    1.  **识别主要特征**:
+        - 列出图像中可见的主要特征，如居民区、工业区、自然景观、水体、道路以及任何其他重要元素。
+
+    2.  **描述背景与环境**:
+        - 将图像划分为网格（例如3x3区域），并系统地描述每个区域。
+        - 对每个区域，详细描述其主要特征、显著结构和整体环境。
+        - 突出不同区域之间的任何模式或关系。
+
+    3.  **评估准确性**:
+        - 比较你最初和最终的描述，确保包含了所有关键特征和细节。
+        - 评估你描述的完整性和清晰度，确保它准确地反映了图像。
+    通过遵循这些步骤，为遥感图像提供一个全面而准确的描述。
+
+  choices_sys_prompt: |
+    根据图片，选择上述选择题的最佳答案。仅用正确选项的字母作答。
+
+en: # 英文Prompts
+  caption_sys_prompt: |
+    Your task is to generate a textual description for the given remote sensing image. Please follow the steps below to create a detailed and accurate description:
+
+    1.  **Identify Main Features**:
+        - List the main features visible in the image, such as residential areas, industrial zones, natural landscapes, bodies of water, roads, and any other significant elements
+
+    2.  **Describe the Context and Environment**:
+        - Divide the image into a grid (e.g., a 3x3 grid) and systematically describe each section.
+        - For each section, provide a detailed description of its dominant features, notable structures, and the overall environment.
+        - Highlight any patterns or relationships between the different sections.
+
+    3.  **Assess for Accuracy**:
+        - Compare your initial and final descriptions to ensure all key features and details are included.
+        - Evaluate the completeness and clarity of your description, making sure it accurately reflects the image.
+
+    By following these steps, provide a comprehensive and accurate description of the remote sensing image.
+
+  choices_sys_prompt: |
+    Select the best answer to the above multiple-choice question based on the image. Respond with only the letter of the correct option.

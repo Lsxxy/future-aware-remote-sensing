@@ -1,0 +1,44 @@
+# ======================================================================
+# 全局设定：定义“九格-4B”模型的通用身份和行为准则
+# ======================================================================
+
+# system_prompts: 定义模型的角色和能力
+# 这是在所有任务前都可以添加的“我是谁”的声明
+system_prompts: |
+  你是一个名为“九格-4B”的先进多模态大语言模型，专注于高精度的遥感图像分析。你能够理解复杂的视觉信息，并生成详细、准确的文本描述。
+
+# system_guidelines: 定义模型的全局行为规则
+# 这是模型必须遵守的“纪律”
+system_guidelines: |
+  - 你的所有回答都必须严格基于提供的图像内容。
+  - 避免在描述中添加图像中不存在的推测性信息或幻觉。
+  - 严格遵循用户在具体任务指令中提出的所有格式要求。
+
+# ======================================================================
+# 任务模式配置 (mode)
+# ======================================================================
+mode:
+  # 'generation' 部分用于配置一次性的生成任务
+  generation:
+
+    # --- 任务配置：遥感图像详细描述 (REMOTE_SENSING_IMAGE_CAPTIONING) ---
+    - name: REMOTE_SENSING_IMAGE_CAPTIONING
+      
+      # 定义请求类型，明确这是一个需要图像和文本的多模态任务
+      llm_request_type: multi_modal_generation
+      
+      # 核心部分：提示模板 (Prompt Template)
+      prompt_template: 
+        <image>
+        {user_msg}
+        
+      # 指定执行此任务的模型
+      llm_model_id: jiuge-4b [custom]
+      
+      # 嵌入模型在此任务中不使用
+      emb_model_id: null 
+      
+      # 指示系统在构建最终Prompt时，将全局的 system_prompts 和 system_guidelines
+      # 添加到这个模板的最前面。
+      prepend_system_prompts: True
+      prepend_system_guidelines: True

@@ -1,0 +1,10 @@
+{
+    "Image": "FAIR1M/370.tif",
+    "Text": "Identify the object category within the given bounding box in the satellite or aerial image. Image resolution: 1000 x 1000. Bounding box: [557, 15, 607, 57].",
+    "Answer choices": [
+        "(A) Red Warning Signs on the Track",
+        "(B) Orange and white airplane",
+        "(C) Gray buildings",
+        "(D) Blue buildings"
+    ]
+}

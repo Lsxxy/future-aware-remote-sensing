@@ -1,0 +1,87 @@
+# ==========================================
+# 模型权重文件
+# ==========================================
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+*.pkl
+model_and_hra/
+docker_image.zip
+fm9g.tar
+
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.so
+venv/
+env/
+.env
+*.conda
+conda-env/
+*.log
+
+# ==========================================
+# Node.js / React 前端
+# ==========================================
+node_modules/
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# IDE 与系统文件
+# ==========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# 推理输出与训练输出
+# ==========================================
+inference_results/
+output/
+outputs/
+wandb/
+runs/
+checkpoints/
+
+# ==========================================
+# PromptWizard 运行产物
+# ==========================================
+prompt_engineering/**/promptwizard/
+prompt_engineering/**/demos/
+prompt_engineering/**/docs/
+prompt_engineering/**/images/
+prompt_engineering/**/*.egg-info/
+
+# ==========================================
+# Docker 相关
+# ==========================================
+*.tar
+*.tar.gz
+
+# ==========================================
+# 敏感配置（API密钥等）
+# ==========================================
+.env
+.env.*
+config.local.*

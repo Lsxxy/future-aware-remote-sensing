@@ -1,0 +1,107 @@
+/* app.js的css */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+    /* 占据剩余空间 */
+    padding: 20px;
+    /* 内部间距 */
+}
+
+
+/* Navigation.js的css */
+.menu-item-custom {
+    margin-bottom: 1600px;
+    /* 调整为你需要的值 */
+}
+
+
+
+/* Image-Text-Retrieval的css */
+/* .file-upload {
+    display: none;
+}
+
+.text-upload {
+    position: relative;
+    bottom: -100px;
+    left: -1100px;
+}
+
+.img2databasebutton {
+    position: relative;
+    bottom: -900px;
+    left: 200px;
+
+    /* 水平居中 */
+
+
+.text2databasebutton {
+    position: relative;
+    bottom: -150px;
+    left: -1250px;
+}
+
+.imginputbutton {
+    position: relative;
+    bottom: -900px;
+    left: -23px;
+    transform: translateX(-50%);
+    /* 水平居中 */
+}
+
+.imginputfromdatabase {
+    position: relative;
+    bottom: -378px;
+    left: 450px;
+    transform: translateX(-50%);
+    /* 水平居中 */
+}
+
+.upload-icon {
+    width: 500px;
+    /* 调整为所需尺寸 */
+    height: 500px;
+    /* 调整为所需尺寸 */
+    background-image: url('/public/put_image.png');
+    /* 加号图片的路径 */
+    cursor: pointer;
+    background-size: cover;
+    /* 或者contain，根据需要 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 300px;
+    /* 相对于原始位置向下移动5像素 */
+    left: 50px;
+    /* 相对于原始位置向右移动5像素 */
+}
+
+.selectedImage {
+    width: 500px;
+    height: 500px;
+    /* 保持图片的原始宽高比 */
+    background-size: cover;
+    /* 或者contain，根据需要 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -470px;
+    /* 相对于原始位置向下移动5像素 */
+    left: 50px;
+    /* 使得marginLeft和marginRight有效，实现水平居中 */
+}
+
+*/ .avatar-uploader .ant-upload.ant-upload-select-picture-card {
+    width: 120px;
+    /* 新的宽度 */
+    height: 120px;
+    /* 新的高度 */
+}
